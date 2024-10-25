@@ -12,10 +12,7 @@ public class Solution {
         try {
             String content = new String(Files.readAllBytes(Paths.get(filePath)));
 
-            JSONObject json = new JSONObject(content);
-            JSONObject keys = json.getJSONObject("keys");
-            int n = keys.getInt("n");
-            int k = keys.getInt("k");
+            JSONObject json = new JSONObject(content);            
 
             for (String key : json.keySet()) {
                 if (!key.equals("keys")) {
